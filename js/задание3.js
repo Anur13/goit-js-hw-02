@@ -1,3 +1,5 @@
+// Вариант 1
+
 const findLongestWord = function (string) {
     const words = string.split(" ")
     let longestWord = ` `
@@ -7,20 +9,26 @@ const findLongestWord = function (string) {
         }
     }
     return longestWord
-
 }
 
+// Вариант 2
 
+const findLongestWords = function (string) {
+    const words = string.split(" ")
 
-  //     wordsLength.sort(function (a, b) {
+    words.sort(function (a, b) {
+        return b.length - a.length
+    })
+    return words[0]
+}
+console.log(findLongestWords("The quick brown fox jumped over the lazy dog")) // 'jumped'
 
-  //         return b.length - a.length;
-  //     });
-  //  console.log(wordsLength[0])
+console.log(findLongestWords("Google do a roll")) // 'Google'
 
+console.log(findLongestWords("May the force be with you")) // 'force'
 
 console.log(findLongestWord("The quick brown fox jumped over the lazy dog")) // 'jumped'
 
-console.log(findLongestWord('Google do a roll')); // 'Google'
+console.log(findLongestWord("Google do a roll")) // 'Google'
 
-console.log(findLongestWord('May the force be with you')); // 'force'
+console.log(findLongestWord("May the force be with you")) // 'force'

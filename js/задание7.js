@@ -23,7 +23,7 @@ const addLogin = function (allLogins, login) {
         logins.push(login)
         return "Логин успешно добавлен!"
     }
-    return "Логин не добавлен"
+    // return "Логин не добавлен"
 }
 
 console.log(addLogin(logins, "Ajax")) // 'Логин успешно добавлен!'
