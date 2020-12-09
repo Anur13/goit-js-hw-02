@@ -1,4 +1,4 @@
-Вариант 1
+// Вариант 1
 
 const findLongestWords = function (string) {
     const words = string.split(" ")
